@@ -5,6 +5,7 @@ import './App.css';
 import Route1 from './containers/Route1';
 import Route2 from './containers/Route2';
 import { TestContext } from './utils/context';
+import HOC from './containers/HOC';
 
 function App() {
   const [name, setName] = useState('Atul Anand');
@@ -20,9 +21,11 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/route1">Route1</Link>
         <Link to="/route2">Route2</Link>
+        <Link to="/hoc">HOC</Link>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/route1" component={Route1} />
+          <Route exact path="/hoc" render={(ownProps => <HOC name={name} {...ownProps} />)} />
           <Route path="/route2" component={Route2} />
         </Switch>
       </main>
