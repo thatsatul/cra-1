@@ -6,8 +6,8 @@ import scssStyles from './home.module.scss';
 const Home = () => {
   return (
     <div>
-      <div className={cssStyles.home_header}>Home Header</div>
-      <div className={scssStyles.home_subheader}>Home Subheader</div>
+      <div className={cssStyles.home_header}>CSS Module</div>
+      <div className={scssStyles.home_subheader}>SCSS Module</div>
     </div>
   );
 }

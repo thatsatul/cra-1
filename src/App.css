@@ -2,9 +2,23 @@
   text-align: center;
 }
 
+main * {
+  margin-right: 12px;
+  padding: 12px 0px;
+}
+
+input {
+  margin-bottom: 12px;
+  width: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+input {
+  display: block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
