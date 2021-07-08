@@ -25,7 +25,7 @@ class ReactPortal extends React.Component {
           to observe that the Modal is not a child of the div.
         </p>
         {showModal &&
-          <Modal>
+          <Modal showModal={this.handleClick}>
             <div>Called from React Portal</div>
             <button onClick={() => console.log(123)}>Click here</button>
           </Modal>

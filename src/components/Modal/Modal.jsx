@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './modal.scss';
@@ -35,21 +35,18 @@ class Modal extends React.Component {
 }
 
 const ModalWrapper = (props) => {
-  const [show, showModal] = useState(true);
   const modalBodyClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
   }
   return (
-    show && (
-      <Modal>
-        <div className="modal-wrapper" onClick={() => showModal(false)}>
-          <div className="modal-body" onClick={(e) => modalBodyClick(e)}>
-            {props.children}
-          </div>
+    <Modal>
+      <div className="modal-wrapper" onClick={() => props.showModal(false)}>
+        <div className="modal-body" onClick={(e) => modalBodyClick(e)}>
+          {props.children}
         </div>
-      </Modal>
-    )
+      </div>
+    </Modal>
   );
 }
 

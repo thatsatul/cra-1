@@ -12,7 +12,7 @@ const Route2 = (props) => {
       <Link to={`${match.url}/comp2`}>Comp2</Link>
       <Suspense fallback={<div>Loading comps...</div>}>
         <Switch>
-          <Route exact path={`${match.url}/comp1`} component={Comp1} />
+          <Route exact path={`${match.url}/comp1`} render={() => <Comp1 {...props} />} />
           <Route exact path={`${match.url}/comp2`} component={Comp2} />
         </Switch>
       </Suspense>

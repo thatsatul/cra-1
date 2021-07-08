@@ -26,10 +26,10 @@ function App() {
         <Link to="/portal">Portal</Link>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/route1" component={Route1} />
+          <Route exact path="/route1" render={(ownProps) => <Route1 name1={name} {...ownProps} />} />
           <Route exact path="/hoc" render={(ownProps => <HOC name={name} {...ownProps} />)} />
           <Route path="/portal" component={ReactPortal} />
-          <Route path="/route2" component={Route2} />
+          <Route path="/route2" render={(ownProps) => <Route2 name1={name} {...ownProps} />} />
         </Switch>
       </main>
     </TestContext.Provider>
