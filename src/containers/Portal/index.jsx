@@ -26,7 +26,8 @@ class ReactPortal extends React.Component {
         </p>
         {showModal &&
           <Modal showModal={this.handleClick}>
-            <div>Called from React Portal</div>
+            <div>You are a babe !!!</div>
+            <br />
             <button onClick={() => console.log(123)}>Click here</button>
           </Modal>
         }
