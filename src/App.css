@@ -49,3 +49,11 @@ input {
     transform: rotate(360deg);
   }
 }
+
+.product_item {
+  color: red
+}
+
+.cart_item {
+  color: green;
+}

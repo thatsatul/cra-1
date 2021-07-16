@@ -8,6 +8,8 @@ import { TestContext } from './utils/context';
 import HOC from './containers/HOC';
 import ReactPortal from './containers/Portal';
 import MouseTracker from './containers/RenderPropsSample';
+import ProductListPage from './containers/ProductListPage';
+import CartItemsListPage from './containers/CartItemsListPage';
 
 function App() {
   const [name, setName] = useState('Atul Anand');
@@ -26,12 +28,16 @@ function App() {
         <Link to="/hoc">HOC</Link>
         <Link to="/portal">Portal</Link>
         <Link to="/render-props">Render Props</Link>
+        <Link to="/product-list">Product List</Link>
+        <Link to="/cart-items-list">Cart Items List</Link>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/route1" render={(ownProps) => <Route1 name1={name} {...ownProps} />} />
           <Route exact path="/hoc" render={(ownProps => <HOC name={name} {...ownProps} />)} />
           <Route exact path="/portal" component={ReactPortal} />
           <Route exact path="/render-props" component={MouseTracker} />
+          <Route exact path="/product-list" component={ProductListPage} />
+          <Route exact path="/cart-items-list" component={CartItemsListPage} />
           <Route path="/route2" render={(ownProps) => <Route2 name1={name} {...ownProps} />} />
         </Switch>
       </main>
