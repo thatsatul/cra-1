@@ -11,6 +11,7 @@ import MouseTracker from './containers/RenderPropsSample';
 import ProductListPage from './containers/ProductListPage';
 import CartItemsListPage from './containers/CartItemsListPage';
 import TodoAppColumnWise from './containers/TodoFunctionalComp';
+import AntiPattern from './components/AntiPattern';
 
 function App() {
   const [name, setName] = useState('Atul Anand');
@@ -32,6 +33,7 @@ function App() {
         <Link to="/product-list">Product List</Link>
         <Link to="/cart-items-list">Cart Items List</Link>
         <Link to="/todos-column">Todos Column With Functional Comp</Link>
+        <Link to="/anti-pattern">Anti Pattern</Link>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/route1" render={(ownProps) => <Route1 name1={name} {...ownProps} />} />
@@ -41,6 +43,7 @@ function App() {
           <Route exact path="/product-list" component={ProductListPage} />
           <Route exact path="/cart-items-list" component={CartItemsListPage} />
           <Route exact path="/todos-column" component={TodoAppColumnWise} />
+          <Route exact path="/anti-pattern" component={AntiPattern} />
           <Route path="/route2" render={(ownProps) => <Route2 name1={name} {...ownProps} />} />
         </Switch>
       </main>

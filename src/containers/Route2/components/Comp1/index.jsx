@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import usePrevious from '../../../../utils/usePrevious';
 import InputEl from './Input';
 import InputEl2 from './InputForwardingRef';
 
@@ -8,12 +7,11 @@ const test2Ref = React.createRef();
 
 const Route2Comp1 = (props) => {
   const [intention, setIntention] = useState('I hate you', Route2Comp1, document.getElementById('root'));
-  const prevProps = usePrevious(props);
 
   useEffect(() => {
-    test1Ref.current.focus();
+    test1Ref.current && test1Ref.current.focus();
     const tm = setTimeout(() => {
-      test2Ref.current.focus();
+      test2Ref.current && test2Ref.current.focus();
       clearTimeout(tm);
     }, 2000);
   })
