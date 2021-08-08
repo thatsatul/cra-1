@@ -1,3 +1,4 @@
+// Component to check lazy loading and chunking
 import React, { Suspense } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 

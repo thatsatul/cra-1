@@ -1,3 +1,5 @@
+// Component to check lazy loading and chunking
+
 import React, { Suspense } from 'react';
 
 const Route2Component = React.lazy(() => import('./Route2.jsx'));
